@@ -16,6 +16,7 @@
   <depend>sensor_msgs</depend>
   <depend>libpcl-all-dev</depend>
   <depend>pcl_ros</depend>
+  <depend>pcl_conversions</depend>
   <depend>geometry_msgs</depend>
   <depend>std_msgs</depend>
   <depend>tf2</depend>
@@ -25,11 +26,11 @@
   <depend>rclcpp_action</depend>
   <depend>rclcpp_lifecycle</depend>
   <!-- Needed to work around https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=894656 on Debian Stretch -->
-  <depend>libvtk-qt</depend>
+  <!-- <depend>libvtk-qt</depend> -->
 
   <exec_depend>rosidl_default_runtime</exec_depend>
-  <exec_depend>eigen3</exec_depend>
-  <exec_depend>pcl</exec_depend>
+  <exec_depend>eigen</exec_depend>
+  <!-- <exec_depend>libpcl-all-dev</exec_depend> -->
 
   <export>
     <build_type>ament_cmake</build_type>

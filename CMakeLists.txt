@@ -37,8 +37,6 @@ set(dependencies
   tf2
   tf2_ros
   pcl_ros
-  Eigen3
-  PCL
 )
 
 
@@ -55,7 +53,7 @@ remove_definitions(-DDISABLE_LIBUSB-1.0)
 
 add_executable(laserscan_multi_merger src/laserscan_multi_merger.cpp)
 ament_target_dependencies(laserscan_multi_merger ${dependencies})
-target_include_directories(laserscan_multi_merger PUBLIC ${EIGEN_INCLUDE_DIRS})
+target_link_libraries(laserscan_multi_merger Eigen3::Eigen)
 target_include_directories(laserscan_multi_merger PUBLIC ${PCL_INCLUDE_DIRS})
 target_link_libraries(laserscan_multi_merger ${PCL_LIBRARIES})
 
